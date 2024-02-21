@@ -1,31 +1,155 @@
-.App {
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+header {
+  background: #005f73;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #023047 4px solid;
+}
+
+header h1, header h2 {
   text-align: center;
+  padding: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.service {
+  background: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.service h2 {
+  color: #023047;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.service p {
+  margin-top: 20px;
+}
+
+/* BMI Calculator Styles */
+.bmi-calculator-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-calculator-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.bmi-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+.bmi-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bmi-form input,
+.bmi-form select,
+.bmi-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.bmi-form button {
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.bmi-form button:hover {
+  background-color: #0056b3;
 }
 
-.heart {
-  color: #ff0000;
+.bmi-result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
 }
 
-.small {
-  font-size: 0.75rem;
+/* Navigation Tabs Styles */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+
+/* Hover Effects */
+.service:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 24px;
+  }
+
+  .service p {
+      font-size: 14px;
+  }
 }
