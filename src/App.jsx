@@ -4,6 +4,7 @@ import './App.css';
 import Introduction from './Components/Introduction';
 import Service from './Components/Service';
 import BMICalculator from './Components/BMICalculator';
+import ContactForm from './Components/ContactForm';
 // Assuming you have images placed in the `public` folder or imported
 import introImage from './weights.png'; // Ensure correct relative path
 import weightLossImage from './weights.png';
@@ -22,6 +23,7 @@ function App() {
             <nav className="nav">
               <NavLink to="/" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} end>Home</NavLink>
               <NavLink to="/bmi-calculator" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>BMI Calculator</NavLink>
+              <NavLink to="/contact" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>Contact for Services</NavLink>
               {/* Add more NavLink components for additional tabs as needed */}
             </nav>
           </div>
@@ -60,6 +62,7 @@ function App() {
               </>
             } />
             <Route path="/bmi-calculator" element={<BMICalculator />} />
+            <Route path="/contact" element={<ContactForm />} />
           </Routes>
         </div>
       </div>
